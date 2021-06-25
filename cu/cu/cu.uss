@@ -1,0 +1,51 @@
+//=========================================================================
+//                      Modele de cas d'utilisation
+//-------------------------------------------------------------------------
+// This usecase model is expressed in UsecaseScript
+// See https://modelscript.rtfd.io/en/latest/languages/usecases/index.html
+//=========================================================================
+
+usecase model MyTheatre
+import glossary model from "../../concepts/glossaires/glossaires.gls"
+
+interactions
+    a .. can ..
+
+usecase CreerUnSpectacle
+    actor Gérant
+    | Le `Gérant` choisit les `Spectacles` difusé dans son théâtre.
+    | Il renseigne toutes les informations liées au `Spectacle` (`Prix`, `Configuration`, ...).
+
+usecase ProgrammerUneReprésentation
+    actor Gérant
+    | Le `Gérant` programme la date et l'heure de toutes les `Représentations`
+    | pour chaque `Spectacle`
+
+usecase AppliquerUneReductionExceptionnelle
+    actor Gérant
+    | Le `Gérant` peut decider d'appliquer une `RéductionExceptionnelle` au prix
+    | d'une ou plusieurs `Représentations`. Il choisit le `Taux` appliqué.
+
+usecase CloturerLaSaison
+    actor Gérant
+    | Archiver et vider la base de données
+    | //TODO: Détailler
+
+usecase ConsulterLesSpectacles
+    actor Personne
+    | Tout personne peut aller sur le site pour consulter les `Représentations` du théâtre
+
+usecase ReserverDesPlaces
+    actor Utilisateur
+    | Un `Utilisateur` peut acheter un ou plusieurs `Billets` pour une `Représentation` 
+
+usecase PreReserverDesPlaces
+    actor Utilisateur
+    | Un |Utilisateur` peut préréservation une `Place` sans l'acheter.
+    | Si la `Préréservation` n'est pas validée (payée) avant le délai choisit par le `Gérant`,
+    | elle est annulée.
+
+usecase ValiderUnePrereservation
+    actor Utilisateur
+    | Un `Utilisateur` peut voir ses `Préréservations` et effectuer l'`Achat` pour les transformer
+    |en `Réservations`

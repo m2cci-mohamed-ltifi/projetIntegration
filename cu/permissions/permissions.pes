@@ -1,0 +1,29 @@
+//=========================================================================
+//                      Modèle de permissions
+//-------------------------------------------------------------------------
+// Ce modèle de permissions est écrit en PermissionScript
+// Voir https://modelscript.rtfd.io/en/latest/languages/permissions/index.html
+//=========================================================================
+
+permission model MyTheatre
+import glossary model from "../../concepts/glossaires/glossaires.gls"
+import class model from "../../concepts/classes/classes.cl1"
+import usecase model "../cu/cu.uss"
+// import relation model "../relations/relations.res"
+
+
+CreerUnSpectacle can U Spectacle
+
+ProgrammerUneReprésentation can U Représentation
+
+AppliquerUneReductionExceptionnelle can U Représentation
+
+CloturerLaSaison can U Spectacle, Représentations, Billet, DossierDAchat, Utilisateur, Siege, Zone, Categorie
+
+ConsulterLesSpectacles can Spectacles, Représentation
+
+ReserverDesPlaces can U Billet
+
+PreReserverDesPlaces can U Billet
+
+ValiderUnePrereservation can U Billet

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Se connecter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap -->
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style-global.css">
+        <link rel="stylesheet" href="css/style-SInscrire.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    </head>
+    <body>
+        <header id="header-content">
+            <div class="d-flex justify-content-between">
+                <a href=".">
+                    <img src="data/images/logo.png" alt="Logo MyTheatre" id="logo"
+                         class="img-fluid rounded-circle img-thumbnail">
+                </a>
+                <div id="loginEtConnexions">
+                    <a href="SInscrire.html"><button class="btn btn-warning">S'inscrire</button></a>
+                    <a href="seConnecter.html"><button class="btn btn-warning">Se connecter</button></a>
+                    <a href="acheterBilletPreReserve.html"><button class="btn btn-warning">Finaliser une commande</button></a>
+                    <a href="ConnexionGerantCtrl"><button class="btn btn-warning">Administration</button></a>
+                </div>
+            </div>
+        </header>
+        <div id='entreeInformations'>
+            <div id="titreSInscrire">
+                <b>S'inscrire</b> 
+
+            </div><br>
+            <table>
+                <tr>
+                    <td><p><b>*</b>Civilité</td><td> <select id='civilite' type='text' name='civilite' size='1'>
+                            <option> Mlle
+                            <option> Mme
+                            <option> M                       
+                        </select></p> 
+                </tr>
+                <tr>
+                    <td><p><b>*</b>Nom</td><td> <input required type='text' name='nom' value='' placeholder="Giraud"></p></td>
+                </tr>
+                <tr>
+                    <td><p><b>*</b>Prénom</td><td> <input type='text' required name='prenom' value='' placeholder="Philémon"></p><td>
+                </tr>
+                <tr>
+                    <td><p><b>*</b>Adresse éléctronique</td><td> <input type='text' required name='email' value='' placeholder="Phildu38@gmail.com"></p><td>
+                </tr>
+                <tr>
+                    <td><p><b>*</b>Mot de passe</td><td> <input type='password' required name='mdp' value='' placeholder="*****"></p><td>
+                </tr>
+                <tr>
+                    <td><p><b>*</b>Confirmer le mot de passe</td><td> <input type='password' required name='mdpConfirmation' value='' placeholder="*****"></p><td>
+                </tr>
+            </table>
+            <div id='validerSInscrire'>
+                <button id="validationSInscrire" class="btn btn-warning">S'inscrire</button>
+            </div>
+        </div>
+
+
+    </body>
+</html>

@@ -1,0 +1,57 @@
+/* 
+    Author     : M2CCI 2021 projet d'intégration groupe 01
+*/
+
+#resume {
+    background-color: white;
+}
+
+#resume div {
+    justify-content: center;
+}
+
+#validation {
+    background-color: white;
+    margin-bottom: 10px;
+    padding-top: 5px;
+}
+
+table {
+    text-align: center;
+    margin: auto;
+}
+
+#achatOuPrereservatoionBtn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#dateMois {
+    vertical-align: super;
+}
+
+#dateAnnee {
+    vertical-align: super;
+}
+
+#validationAchat {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#titrePaiement {
+    font-size: 25px;
+}
+
+#imageCartes {
+    width: 60px;
+    height: 60px;
+}
+
+.choixTarifReduit {
+    margin-left: 20px;
+}
+
+.prixToHide {
+    visibility: hidden;
+}

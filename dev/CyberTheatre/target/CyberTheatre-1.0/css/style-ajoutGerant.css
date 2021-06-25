@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+
+/* 
+    Created on : 31 mars 2021, 10:00:37
+    Author     : Emilie Sirot
+*/
+
+#ajoutSpectacle {
+    background-color: white;
+    
+}
+
+#ajoutRepresentation {
+    background-color: white;
+    
+}
+
+#formulaireSpectacle {
+    display: none;
+}
+
+#formulaireRepresentation {
+    display: none;
+}
+
+#btnSpectacle {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#btnRepresentation {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+table {
+    text-align: center;
+    margin: auto;
+}
+#validationAjoutSpectacle{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#validationAjoutRepresentation{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

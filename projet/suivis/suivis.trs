@@ -1,0 +1,76 @@
+//=========================================================================
+//                      Model de suivi
+//-------------------------------------------------------------------------
+// Ce modèle de suivis est exprimé en TrackScript.
+// https://modelscript.readthedocs.io/en/latest/languages/tracks/index.html
+//=========================================================================
+
+track model MyTheatre
+import glossary model from '../../concepts/glossaries/glossaries.gls
+
+hypothesis H1: `Preréservation` des `billets`
+    | On suppose qu'un `billet` est généré lors de la préréservation avec
+    | un `NuméroDeBillet`.
+    | Lors d'un paiement de la `Preréservation`, ce même `billet` change 
+    | de status et devient un `BilletAcheté`, sans changer de `NuméroDeBillet`.
+
+decision D1: Les `Adherents` ont un seul `TarifAdhérent` 
+    | On suppose qu'un `Adhérent` a droit à une réduction au plus par représentation.
+
+Question Q1: Peut-on `acheter` de `billets` sans être `Utilisateurs` ?
+    | Oui, une personne peut décider d'acheter des `billets` sans fournir d'informations
+    | personnelles. Elle n'est alors pas un `Utilisateur` enregistré du site.
+    | Pour faire une pré-réservation, il faut par contre être `Utilisateur`
+
+decision D2: Les numeros des `sièges`
+    | Les numeros des `sièges` recommencent à 1 dans chage `rang`
+    | donc un `siège` est défini par un numéro de `siège` et un numéro de `rang`
+
+decision D3: 
+    | L'implementation java des représentation fusionne date et heure de représentation
+    | en un seul attribut
+
+decision D4:
+    | Un `Spectacle` possède une description sous forme de texte. 
+    | Un `Spectacle` possède une affiche sous forme d'image. Si aucune n'est forunie, une 
+    | image générique sera mise à la place.
+
+Question 2 : Se connecter, s'inscrire et devenir adhérent
+    | Il est possible d'`acheter` des `billets` sans être connecté en tant qu'`utilisateur` du site
+    | On doit pouvoir s'inscrire en tant qu'`utilisateur` et `adhérent` via le site
+
+Question 3 : Critère de selection des représentations
+    | Les critères permétant à un `spectateur` de choisir à quel `représentation` il veut assister sont :
+    |   titre du `spectacle`
+    |   une plage de date et d'heure
+    |   le `typeSpectacle`
+    |   le `publicCibleSpectacle`
+    |   le `prix` des `billets`
+
+Question 4 : plan du théâtre
+    | Le plan de la `salle` et la disposition des `sièges` sont libres
+
+Question 5 : Choix de sièges lors de la réservation d'un billet
+    | Le choix des `siege` par le `spectateur` via sélection sur un plan est une implémentation
+    | acceptable.
+
+Question 6 : Date d'ouverture et fermeture
+    | Les heures `représentations` peuvent couvrir la totalité de la journée.
+    | Le théatre ferme au plus tard à 3h du matin, la dernière `représentation`
+    | terminant 30 minutes avant.
+    | Un `spectacle` peut avoir un temps d'installation et de désinstallation.
+    
+decision D5 :
+    | (suite décision D4) Si aucune description n'est fournie pour un spectacle, 
+    | un texte générique ("Aucune descrition pour ce spectacle") est mis à la place
+    
+Question 7 : confirmation des préréservation
+    | L'ensemble des `billets` `préréservés` ensembles sont dans un même `DossierAchat`
+    | Il seront `réservés` et `payés` en même temps.
+    | En conséquence, l'attribut `préréservée` est une caractérisque des `DossierAchat`
+    | et non des `billets`
+
+decision D6 :
+    | Le `représentations` pour lesquelles on ne peut pas réserver de `billet` n'apparraissent
+    | pas (`représentations` dans le passé, ou plus de `sieges` disponibles)
+    | Si aucune représentations n'apparait pour un `spectacle`, le `spectacle` n'apparait pas.

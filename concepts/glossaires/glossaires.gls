@@ -1,0 +1,232 @@
+//=========================================================================
+//                      Modèle de glossaire
+//-------------------------------------------------------------------------
+// Ce modèle de glossaire est exprimé en GlossaryScript
+// voir https://modelscript.readthedocs.io/en/latest/languages/glossaries/index.html
+//=========================================================================
+
+glossary model MyTheatre
+
+
+// Théâtre
+//    | Lieu destiné à la 'Représentation' de `Spectacles`.
+//    | Un Théâtre possède une ou plusieurs `Salle` qui acceuille des `Représentations`
+
+
+MyTheatre
+    | Théâtre proposant un certain nombre de `Programmations`.
+    | L'achat de `sièges` pour les `représentations` sur MyTheatre peut se faire à l'aide d'un site Web
+    | La gestion des `Programmations` de MyTheatre peut également être faite par le `Gérant` sur ce même site Web
+
+//------------------------------------------------------------
+//   Glossaire lié aux `Spectacle`
+//------------------------------------------------------------
+Spectacle
+    | Divertissement offert à un public.
+    | Un spectacle est réalisé par un `Artiste`. 
+    | Il est joué lors de `Représentations` auxquels assistent des `Spectateurs`.
+    inflections: Spectacles
+
+NuméroDeSpectacle 
+    | Numéro par lequel un `Spectacle` est identifié.
+
+Représentation
+    | Une représentation est le fait de jouer un `Spectacle` dans le théâtre `MyTheatre`
+    | à une date et un horaire donné.
+    | Le `Gérant` choisit les `Représentation` se déroulant dans son théâtre.
+    | Pour y assister, une personne doit posséder un `Billet`.
+    | Il y a au plus une `Représentation` d'un `Spectacle` par jour.
+    inflections: Représentations
+
+Programmation
+    | Liste de toutes les `Représentations` se tenant à `MyTheatre`.
+    inflections: Programmations, Programmer
+
+TypeDeSpectacle
+    | Chaque `Spectacle` correspond `TypeDeSpectacle`, c'est-à-dire à un genre théâtral connus en particulier.
+    | Il peut y avoir opéra, drame, humoristique, musical ou cirque.
+    inflections: TypeDeSpectacles
+
+OneWomanShow
+    | Un `Spectacle` de type humoristique dans lequel une seule personne est sur scène.
+    inflections: OneManShow
+
+SpectacleAvecOrchestre
+    | Un `Spectacle` de type opéra dans lequel il y a un orchestre
+
+Configuration
+    | Pour un `Spectacle`, certain `Sièges`, `Rangs` ou `Zones` peuvents être interdits.
+    | La `Configuration` d'un `Spectacle` est la description des `Sièges` vendable et des `Sièges` interdis pour
+    | touts les `Représentations` de ce `Spectacle`.
+
+//------------------------------------------------------------
+//   Glossaire lié aux `Sièges`
+//------------------------------------------------------------
+Salle
+    | Espace dans lequel se joue les `Représentations` des `Spectacles`.
+    inflections: Salles
+
+Siège
+    | Emplacement dans le salle de `Spectacle` pour une `Représentation` donnée. 
+    | Un unique `Spectateur` peut assister à une `Représentation` sur un `Siège`.
+    | Un siège possède un `Tarif` en fonction du `Spectacle` et de son `CatégorieDeSiège`
+    inflections: Sièges
+    synonyms: Place, Places
+
+CatégorieDeSiège
+    | Spécificité d'une `Siège` en fonction de son emplacement dans la `Salle`.
+    | Il y a trois `CatégorieDeSiège`. `Poulailler`, `Balcon` ou `Orchestre`.
+    inflections: CatégoriesDeSiège
+
+CatégoriePoulailler
+    | `CatégorieDeSiège`. La `ZonePoulailler` est une galerie supérieure éloignée de la scène.
+
+CatégorieBalcon
+    | `CatégorieDeSiège`. La `ZoneBalcon` est une galerie surplombant l'arrière du parterre.
+    | Pouvant s'étendre sur les côtés, jusqu'à l'avant scène.
+
+CatégorieOrchestre
+    | `CatégorieDeSiège`. La orchestre est la partie centrale de la `salle` située en contrebas du plateau.  
+
+Zone
+    | Ensemble de siège possédant la même `CatégorieDeSiège`.
+    inflections: Zones
+
+Rang
+    | Ensemble de `Sièges` positionnées sur une même ligne, identifié par un numéro unique.
+    inflections: Rangs
+
+NuméroDeSiège
+    | Position d'une `Siège` dans un `Rang`.
+    inflections: NumérosDeSiège
+
+//------------------------------------------------------------
+//   Glossaire des `Utilisateur`
+//------------------------------------------------------------
+Utilisateur
+    | Personne possédant un compte sur le site du théâtre `MyTheatre`.
+    | Un `Utilisateur` est identifiant par son `Login` et décrit par
+    | son nom, prénom et adresse e-mail.
+    | Chaque `Utilisateur` possède un mot de passe.
+    inflections: Utilisateurs
+
+Login
+    | Identifiant unique associé à un Utilisateur
+    inflections: Logins
+
+Gerant
+    | Utilisateur résponsable de du théâtre `MyTheatre`
+    | Le `Gérant` choisit quelles `Représentations` auront lieux.
+    | Il décide des `Sièges` disponibles pour chaque `Spectacle` diffusé.
+    | Il décide de l'application de `Réductions Exceptionnelles`
+
+Artiste
+    | Personnes, groupe de personnes ou organisme créateur d'un ou plusieurs `Spectacles`.
+    | Un `Artiste` s'arrange avec le `Gérant` pour que celui-ci programme des `Représentations` de son `Spectacle`
+    synonyms: Organisme 
+    inflections: Artistes 
+
+
+//------------------------------------------------------------
+//   Glossaire des `Réservations`
+//------------------------------------------------------------
+Préréservation
+    | Moyen de `Réserver` des `Sièges` en décalant le paiement d'une durée choisie par le gérant en fonction
+    | de la représentation. 
+    | Il est possible d'annuler une `Préréservation`.
+    inflections: Préréservations, Préréserver
+    synonyms: Réservation sans payer
+    
+Réservation
+    | Action d'une `Personne` pour obtenir un ou plusieurs `Billets` pour une seule `Représentation`.
+    inflections: Réservations, Réserver
+
+Commande
+    | `Réservation` ou `préréservation`
+    inflections: Commandes, Commander
+
+Billet
+    | Document attestant de l'achat d'un `Siège` pour une `Représentation`.
+    | Un `Spectateur` doit présenter un `Billet` pour pouvoir assiter à la `Représentation` correspondante.
+    | Un billet est identifié par un `NumeroDeBillet` unique et par sa date d'émission affinée à la seconde.
+    inflections: Billets
+    
+BilletPreReservé
+    | `Billet` obtenu après une préservation. Il ne permet pas d'acceder à la `Représentation`.
+
+BilletAcheté    
+    | `Billet` obtenu après un achat. Il permet d'acceder à la `Représentation`.
+
+NuméroDeBillet
+    | Identifiant unique d'un `Billet`.
+    | inflections: NumerosDeBillet
+
+Complet
+    | Un `Spectacle` est complet si toutes les `Sièges` disponibles pour ce `Spectacle` sont vendues.
+    | Plus aucune `Reservation` n'est alors possible.
+    inflections: Complets
+
+TypeDePublic
+    | Classe de public définie par une tranche d'âge.
+    | Le public peut être 1-5 ans, jeune public, tout public ou adulte.
+
+Spectateur
+    | Personne possédant une `Billet` pour assister à une `Représentation`
+    inflections: Spectateurs
+
+Achat
+    | Fait d'acheter un ou plusieurs `Billets` ce qui créé un `DossierAchat` dans la base de données.
+    inflections: Achats
+
+DossierAchat
+    | Ensemble des informations concernant un `Achat`.
+    | Un `DossierAchat` permet de retrouver tous les `Billets` associé et le prix payé.
+    inflections: DossiersAchat
+
+NuméroDossierAchat
+    | Numéro identifiant un `DossierAchat`.
+
+NombreDeSiègesDisponibles
+    | Le nombre des sièges restantes pour une `Représentation`
+    
+
+//------------------------------------------------------------
+//   Glossaire des `Tarifs`
+//------------------------------------------------------------
+Tarif
+    | Prix d'un `Billet`. Plusieurs `Tarifs` existent. 
+    | Par défaut, le prix est celui du `TarifPlein`. Si elle est éligible, une personne peut demander au moment de
+    | la `Réservation` l'un des `TarifRéduit`.
+    | Le prix d'un siège dépend de son tarif de base et d'un taux dépendant de sa `CatégorieDeSiège`.
+    inflections: Tarifs
+
+TarifPlein
+    | Prix de base d'un `Billet` pour un `Spectacle` en fonction de sa `CatégorieDeSiège`.
+    inflections: TarifPleins
+
+TarifRéduit 
+    | Prix de `Billet` moins cher que le `TarifPlein`.
+    synonyms: Réduction
+    inflections: TarifRéduits
+
+TarifEtudiant
+    | `TarifRéduit` accordé à une personne qui possède un statut étudiant.
+
+TarifFamilleNombreuse
+    | `TarifRéduit` accordé aux personnes qui possède une carte famille nombreuse. 
+
+RéductionExeptionnelle
+    | Une `Réduction` choisit par le gérant pour attirer plus de monde.
+    | Elle peut être ajoutée au `Réductions` normales
+    inflections: RéductionExptionnelles
+
+TarifAdhérent
+    | `TarifRéduit` accordé à une personne `Adhérente`.
+
+Taux
+    | Modifications apportée au `Tarif` d'un `Siège` en fonction de sa `CatégorieDeSiège`.
+
+Adhérent
+    | Personne payant un abonnement auprès de MyTheatre, afin d'obtenir un `TarifAdhérent` sur les `Représentations`
+    | //TODO: Obtenir plus d'info sur les adhérents
+    inflections: Adhérents, Adhérente, Adhérentes

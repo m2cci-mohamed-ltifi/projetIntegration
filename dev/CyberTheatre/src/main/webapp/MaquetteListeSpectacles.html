@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js"></script>
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.min.css">
+    <link rel="stylesheet" href="css/style-global.css">
+    <link rel="stylesheet" href="css/style-listeSpectacles.css">
+
+
+</head>
+
+<body>
+    <div>
+        <header id="header-content">
+            <div class="d-flex justify-content-between">
+                <a href=".">
+                    <img src="data/images/logo.png" alt="Logo MyTheatre" id="logo"
+                         class="img-fluid rounded-circle img-thumbnail">
+                </a>
+                <div id="loginEtConnexions">
+                    <a href="SInscrire.html"><button class="btn btn-warning">S'inscrire</button></a>
+                    <a href="seConnecter.html"><button class="btn btn-warning">Se connecter</button></a>
+                    <a href="acheterBilletPreReserve.html"><button class="btn btn-warning">Finaliser une commande</button></a>
+                    <a href="ConnexionGerantCtrl"><button class="btn btn-warning">Administration</button></a>
+                </div>
+            </div>
+        </header>
+
+        <br>
+        <br>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9 offset-md-3">
+                    <h1>Programmation</h1>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-3" id="filtresBox">
+                    <div class="border rounded sticky-top">
+                        <form class="form-horizontal" id="filtresForm">
+                            <label class="form-label">Choisissez votre spectacle :</label>
+                            <div class="form-group">
+                                <label for="site-search"><b>Titre</b></label><br>
+                                <input type="search" id="site-search" name="r" aria-label="Rechercher un spectacle"><br>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label"><b>Dates</b></label>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="premierJour">Entre le</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="form-control" type="date" id="premierJour" name="premierJour">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="dernierJour">et le</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="form-control" type="date" id="dernierJour" name="dernierJour">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label><b>Plage horaire</b></label><br>Début du spectacle entre <span id="debutPlage">10</span>h et <span id="finPlage">24</span>h<br>
+                                <div class="sliderHeureContainer">
+                                    <input id="sliderHeures" type="text" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label"><b>Type de spectacle</b></label>
+
+                                <div class="form-check">
+                                    <input type="checkbox" class=".form-check-input" id="filtre_typeOpera">
+                                    <label for="filtre_typeOpera" class="form-check-label">Opéra</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class=".form-check-input" id="filtre_typeDrame">
+                                    <label for="filtre_typeDrame" class="form-check-label">Drame</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class=".form-check-input" id="filtre_typeHumoristique">
+                                    <label for="filtre_typeHumoristique" class="form-check-label">Humoristique</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class=".form-check-input" id="filtre_typeMusical">
+                                    <label for="filtre_typeMusical" class="form-check-label">Musical</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class=".form-check-input" id="filtre_typeCirque">
+                                    <label for="filtre_typeCirque" class="form-check-label">Cirque</label>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="form-label"><b>Public cible</b></label>
+
+                                <div class="form-check">
+                                    <input type="checkbox" class=".form-check-input" id="filtre_public1-5ans">
+                                    <label for="filtre_public1-5ans" class="form-check-label">Enfant entre 1 et 5
+                                            ans</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class=".form-check-input" id="filtre_publicJeunes">
+                                    <label for="filtre_publicJeunes" class="form-check-label">Jeune public</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class=".form-check-input" id="filtre_publicAll">
+                                    <label for="filtre_publicAll" class="form-check-label">Tout public</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class=".form-check-input" id="filtre_publicAdulte">
+                                    <label for="filtre_publicAdulte" class="form-check-label">Adultes</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="slidecontainer">
+                                    <p><b>Prix maximum: </b> <span id="prix"></span>€</p>
+                                    <input type="range" min="10" max="250" value="40" class="slider" id="slidePrix">
+                                </div>
+                            </div>
+                            <br>
+                            <div id="boutonValider"><button class="btn btn-warning">Valider</button></div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-9" id="programmationFiltree">
+                    <div class="container-fluid">
+                        <div class="row representation ">
+                            <div class="col-md-2 d-flex align-items-center vignette">
+                                <img src="data/images/vignette1.png" id="carrousel-gauche-3" class="border border-warning rounded">
+                            </div>
+                            <div class="col-md-10 description">
+                                <h3> Le Malade Imaginaire </h3>
+                                <p>
+                                    In amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas, quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles et constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane
+                                    nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia iudicium tollitque experiendi potestatem
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="duree">Durée : <b>120 minutes</b></div><br>
+                                        <div class="typeSpectacle">Type de spectacle : <b>Comédie</b></div>
+                                        <div class="typePublic">Type de public : <b>Tout public</b></div><br>
+                                    </div>
+                                    <div class="col-md-6 Listerepresentation">
+                                        <div><b>Représentations</b></div>
+                                        <div class="dummyLink"><u>21/03/21 à 15h<br>2/04/21 à 18h<br>25/04/21 à 20h</u>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="row representation">
+                            <div class="col-md-2 d-flex align-items-center vignette">
+                                <img src="data/images/vignette2.png" id="carrousel-gauche-3" class="border border-warning rounded">
+                            </div>
+                            <div class="col-md-10 description">
+                                <h3> Les Fourberies de Scapin </h3>
+                                <p>
+                                    In amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas, quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles et constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane
+                                    nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia iudicium tollitque experiendi potestatem
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="duree">Durée : <b>110 minutes</b></div><br>
+                                        <div class="typeSpectacle">Type de spectacle : <b>Comédie</b></div>
+                                        <div class="typePublic">Type de public : <b>Tout public</b></div><br>
+                                    </div>
+                                    <div class="col-md-6 Listerepresentation">
+                                        <div><b>Représentations</b></div>
+                                        <div class="dummyLink">
+                                            <u>22/03/21 à 15h<br>3/04/21 à 18h<br>26/04/21 à 20h<br>
+                                                </u>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="row representation">
+                            <div class="col-md-2 d-flex align-items-center vignette">
+                                <img src="data/images/vignette3.png" id="carrousel-gauche-3" class="border border-warning rounded">
+                            </div>
+                            <div class="col-md-10 description">
+                                <h3> L'Avare </h3>
+                                <p>In amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas, quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles et constantes eligendi; cuius generis est magna penuria.
+                                    Et iudicare difficile est sane nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia iudicium tollitque experiendi potestatem
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="duree">Durée : <b>90 minutes</b></div><br>
+                                        <div class="typeSpectacle">Type de spectacle : <b>Comédie</b></div>
+                                        <div class="typePublic">Type de public : <b>Tout public</b></div><br>
+                                    </div>
+                                    <div class="col-md-6 Listerepresentation">
+                                        <div><b>Représentations</b></div>
+                                        <div class="dummyLink"><u>20/03/21 à 15h<br>6/04/21 à 18h<br>28/04/21 à 20h</u></div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+    <script src="js/sliderSimple.js"></script>
+    <script src="js/sliderDouble.js"></script>
+
+</body>
+
+
+</html>

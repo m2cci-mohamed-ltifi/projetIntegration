@@ -1,0 +1,81 @@
+/* 
+    Author     : M2CCI 2021 projet d'intégration groupe 01
+*/
+
+
+/* Général */
+
+body {
+    /*background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)), url("../data/images/background.png");*/
+    background-image: url("../data/images/background.png");
+    /*background-image: url("../data/images/theatre.jpg");*/
+    background-attachment: fixed;
+    /* background-color:aliceblue; */
+    text-align: center;    
+}
+
+footer {
+    color: white;
+}
+
+footer a {
+    color: gold;
+}
+
+
+/* Header */
+
+header {
+    margin: 20px;
+}
+
+header button {
+    margin-left: 10px;
+}
+
+#logo {
+    width: 150px;
+    height: 120px;
+}
+
+
+
+/* Navbar */
+
+#my-nav-buttons button {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#voir-progr-btn {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+/* Override default button color */
+
+
+/* .btn-warning { 
+    background-color: #FFDF00;
+} */
+
+h1 {
+    color: gold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Footer */
+
+footer {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    /* background-color: grey; */
+}
+
+footer button {
+    margin-left: 10px;
+    margin-right: 10px;
+}

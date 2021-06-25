@@ -1,0 +1,107 @@
+--=========================================================================
+--                          Modèle d'objets
+---------------------------------------------------------------------------
+-- Ce modèle d'objet est exprimé en ObjectScript.
+-- Voir https://modelscript.readthedocs.io/en/latest/languages/objects1/index.html
+-- ObjectScript1 est une version annotée du langage USE OCL.
+-- Les annotations sont définies sous forme de commentaires :
+--    "@" pour les annotations d'instructions,
+--    "|" pour les annotations de documentation
+--=========================================================================
+--
+--@ object model O1
+--@ import glossary model from "../../glossaires/glossaires.gls"
+--@ import class model from "../../classes/classes.cl1"
+
+--Scenario 1 et 1 bis
+--Creation de la personne interrargissant
+! create paul : Utilisateur
+    ! paul.login := 'Undifined'
+    ! paul.nom := 'Undifined'
+    ! paul.prenom := 'Paul'
+    ! paul.email := 'Undifined'
+    ! paul.motDePasse := 'Undifined'
+
+--Creation du spectacle et de ses représentations
+! create leMaladeImaginaire : SpectacleHumoristique
+    ! leMaladeImaginaire.numero := 1
+    ! leMaladeImaginaire.nom := 'Le Malade Imaginaire'
+    ! leMaladeImaginaire.publicCible := TypeDePublic::toutPublic
+    ! leMaladeImaginaire.prixDeBase := 20.00
+    ! leMaladeImaginaire.duree := 120
+    ! leMaladeImaginaire.type := TypeDeSpectacle::humoristique
+    ! leMaladeImaginaire.description := undefined
+    ! leMaladeImaginaire.imageSource := undefined
+    ! leMaladeImaginaire.oneManShow := false
+
+! create leMaladeImaginaireRepresentation1 : Representation
+    ! leMaladeImaginaireRepresentation1.date := '13/03/2021'
+    ! leMaladeImaginaireRepresentation1.heureDebut := '21h'
+    ! leMaladeImaginaireRepresentation1.tauxReductionExceptionelle := 1
+    ! leMaladeImaginaireRepresentation1.nombrePlacesRestantes_d := 300
+    
+! create leMaladeImaginaireRepresentation2 : Representation
+    ! leMaladeImaginaireRepresentation2.date := '14/03/2021'
+    ! leMaladeImaginaireRepresentation2.heureDebut := '18h'
+    ! leMaladeImaginaireRepresentation2.tauxReductionExceptionelle := 1
+    ! leMaladeImaginaireRepresentation2.nombrePlacesRestantes_d := 150
+
+! insert(leMaladeImaginaire, leMaladeImaginaireRepresentation1) into EstRepresentePar
+! insert(leMaladeImaginaire, leMaladeImaginaireRepresentation2) into EstRepresentePar
+
+--Creation des sièges
+! create siege1 : Siege
+    ! siege1.numero := 12
+    ! siege1.rang := 2
+
+! create siege2 : Siege
+    ! siege1.numero := 13
+    ! siege1.rang := 2
+
+! create siege3 : Siege
+    ! siege1.numero := 14
+    ! siege1.rang := 2
+
+! create zone1 : Zone
+    ! zone1.numero := 1
+
+! create categorieOrchestre: Categorie
+    ! categorieOrchestre.nom := NomCategorie::orchestre
+
+! insert(siege1, zone1) into AppartientALaZone
+! insert(siege2, zone1) into AppartientALaZone
+! insert(siege3, zone1) into AppartientALaZone
+
+! insert(zone1, categorieOrchestre) into AppartientALaCategorie
+
+--Creation de l'achat
+! billet1 := new Billet between (leMaladeImaginaireRepresentation1, siege1)
+    ! billet1.numero := 60
+    ! billet1.dateAchat := '12/03/2021'
+    ! billet1.tarifReduit := 1
+    ! billet1.prix_d := 20.00
+
+! billet2 := new Billet between (leMaladeImaginaireRepresentation1, siege2)
+    ! billet1.numero := 61
+    ! billet1.dateAchat := '12/03/2021'
+    ! billet1.tarifReduit := 1
+    ! billet1.prix_d := 20.00
+
+! billet3 := new Billet between (leMaladeImaginaireRepresentation1, siege3)
+    ! billet1.numero := 62
+    ! billet1.dateAchat := '12/03/2021'
+    ! billet1.tarifReduit := 1
+    ! billet1.prix_d := 20.00
+    
+
+! create dossier1 : DossierDAchat
+    ! dossier1.numero := 36
+    ! dossier1.achete := false
+    ! dossier1.prixTotal_d := 60.0
+    ! dossier1.nombreDeBillets_d := 3
+
+! insert(dossier1, billet1) into ContientLesBillets
+! insert(dossier1, billet2) into ContientLesBillets
+! insert(dossier1, billet3) into ContientLesBillets
+
+! insert(paul, dossier1) into Possede

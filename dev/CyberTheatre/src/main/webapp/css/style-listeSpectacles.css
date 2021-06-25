@@ -1,0 +1,174 @@
+/* 
+    Author     : M2CCI 2021 projet d'intégration groupe 01
+*/
+
+
+.Listerepresentation {
+    text-align: right;
+}
+
+.dummyLink {
+    color: blue;
+}
+
+
+#filtresBox > div {
+    /*S'applique au slider => masque le slider au delà des handles et masque le tooltip*/
+    background-color: white;
+    text-align: left;
+    /* max-width: 300px;*/
+}
+
+.slider .tooltip {
+    display: none;
+}
+
+
+#filtresForm {
+    padding: 5px;
+}
+
+
+.representation {
+    padding-top: 10px;
+    /* background-color: greenyellow; */
+    text-align: right;
+}
+
+.representation .vignette {
+    text-align: center;
+}
+
+.representation .description {
+    text-align: left;
+    background-color: white;
+    opacity: 0.9;
+}
+
+.representation img {
+    width: 100%;
+    max-width: 250px;
+}
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 60%;  /*Full-width*/ 
+    height: 10px;  /*Specified height */
+    background: darkgray;  
+    outline: none;  /*Remove outline */
+    opacity: 1;  
+    -webkit-transition: .2s;  
+    transition: opacity .2s;
+    
+}
+
+.slider-handle.custom {
+    background: transparent none;
+    
+}
+
+.slider-handle.custom::before {
+	line-height: 20px;
+	font-size: 20px;
+	content: '\26AB'; /*unicode star character*/
+	color: #726204;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 0.6; /* Fully shown on mouse-over */
+    
+}
+
+/*.slider-handle.custom::before {
+	line-height: 20px;
+	font-size: 20px;
+	content: '\2605';
+	color: #726204;
+}*/
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: Chrome;  
+    appearance: button;
+    width: 25px; 
+    height: 25px;  
+    background: #4CAF50;  
+    cursor: pointer;  
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;   
+    height: 25px;  
+    background: #4CAF50;   
+    cursor: pointer;  
+}
+
+.sliderHeureContainer {
+    margin-left: 10px
+}
+
+#boutonValider {
+    text-align: center;
+}
+
+#noProgBox {
+    justify-content: center;
+}
+
+#noProgMessage {
+    margin-top: 50px;
+
+    padding : 20px;
+    background-color: white;
+    justify-content: center;
+}
+
+.prixParCategorie{
+    text-align: center; 
+}
+
+.prixCatPoulailler{
+    color:black;
+}
+
+.prixCatOrchestre{
+    color:goldenrod;
+}
+
+.prixCatBalcon{
+    color:darkred;
+}
+
+.prix{
+    text-align: right;
+}
+
+.cat{
+    text-align: left;
+}
+
+.prixBalcon{
+    color:darkred;
+}
+
+table, th, td{
+    text-align: right;  
+}
+
+a>span{
+    color:red;
+    border-style:dotted;
+    border-color:black;
+}
+
+#reduction{
+    color:red;
+}
+

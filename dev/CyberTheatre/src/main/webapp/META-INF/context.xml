@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/CyberTheatre">
+    <Resource
+        name="jdbc/CyberTheatre"
+        auth="Container"
+        type="javax.sql.DataSource"
+        driverClassName="org.sqlite.JDBC"
+        url="jdbc:sqlite:C:\Users\Ltifi\Desktop\m2cci-2021-pi-01\bd\sql\bd.sqlite3"
+        maxIdle="3"
+        maxTotal="10"
+        maxWaitMillis="10000"
+        
+    />
+</Context>
+
+<!-- url="jdbc:sqlite:${mytheatrebdd}" -->
+<!--url="jdbc:sqlite:C:\Users\Ltifi\Desktop\PI\m2cci-2021-pi-01\bd\sql\bd.sqlite3"-->

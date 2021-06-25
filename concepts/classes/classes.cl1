@@ -1,0 +1,182 @@
+--=========================================================================
+--                          Modèle de classe
+---------------------------------------------------------------------------
+-- Ce modèle de classe est exprimé en ClassScript1.
+-- Voir https://modelscript.readthedocs.io/en/latest/languages/classes1/index.html
+-- ClassScript1 est une version annotée du langage USE OCL.
+-- Les annotations sont en commentaires et commencent par :
+--    "@" pour les annotations d'instructions,
+--    "|" pour les annotations de documentation.
+--=========================================================================
+--
+--@ class model MyTheatre
+--@ import glossary model from "../glossaires/glossaires.gls"
+
+model MyTheatre
+
+---------------------------------------------------------------------------
+-- enumerations
+---------------------------------------------------------------------------
+
+    enum TypeDeSpectacle{
+        opera,
+        drame,
+        humoristique,
+        musical,
+        cirque
+    }
+    
+    enum NomCategorie {
+        poulailler,
+        balcon,
+        orchestre
+    }
+    
+    enum TypeDePublic {
+        public1a5Ans,
+        jeunePublic,
+        toutPublic,
+        adulte
+    }
+
+
+---------------------------------------------------------------------------
+-- classes
+---------------------------------------------------------------------------
+
+class Spectacle
+    attributes
+        numero: Integer--@ {id}
+        nom: String
+        publicCible: TypeDePublic
+        prixDeBase: Real
+        duree: Integer -- en minutes
+        type: TypeDeSpectacle 
+        description: String
+        imageSource: String
+        
+end
+
+class SpectacleDOpera < Spectacle
+    attributes
+        orchestre: Boolean --@ {id}
+end
+
+class SpectacleHumoristique < Spectacle
+    attributes
+        oneManShow: Boolean --@ {id}
+end  
+---------------------------------------------------
+class Representation
+    attributes
+        date: String --@ {Date}{id}
+        heureDebut: String --@ {Heure}{id}
+        tauxReductionExceptionelle: Real
+        nombreBillets_d: Integer
+        nombrePlacesRestantes_d: Integer
+end
+---------------------------------------------------
+class Siege
+    attributes
+        numero: Integer--@ {id}
+        rang: Integer--@ {id}
+end
+class Zone
+    attributes
+        numero: Integer --@ {id}
+end
+
+class Categorie
+    attributes
+        nom: NomCategorie --@ {id}
+end
+
+-------------------------------------------------
+class DossierDAchat
+    attributes
+        numero: Integer --@ {id}
+        achete: Boolean
+        prixTotal_d: Real --| attribut calcule
+        nombreDeBillets_d: Integer --| attribut calcule
+end
+--------------------------------------------------
+class Utilisateur
+    attributes
+        login: String --@ {id}
+        nom: String
+        prenom: String
+        email: String
+        motDePasse: String
+end 
+
+class Adherent < Utilisateur
+    attributes
+        dateDAdhesion: String --@ {Date}
+        duree: Integer
+end
+--------------------------------------------------------------------------------
+----Associations 
+--------------------------------------------------------------------------------
+composition EstRepresentePar
+    between
+        Spectacle[1] role spectacle
+        Representation[*] role representations
+end
+----------------------------------------------------
+
+associationclass Billet
+    between
+        Representation[*] role representations
+        Siege[*] role sieges
+
+    attributes
+        numero: Integer --@ {id}
+        dateAchat: String --@ {DateTime}
+        tarifReduit: Real
+        prix_d: Real
+end
+--------------------------------------------------------
+
+association ContientLesBillets
+    between
+        DossierDAchat[1] role dossierDAchat
+        Billet[1..*] role billets
+end
+
+association Possede
+    between 
+        Utilisateur[0..1] role utilisateur
+        DossierDAchat[*] role dossiersDAchat
+end
+
+association AppartientALaZone
+    between 
+        Siege[1..*] role sieges
+        Zone[1] role zone
+        -- Le [0..1] permet la création facile du diagramme d'objet
+end
+        
+association AppartientALaCategorie
+    between
+        Zone[1..*] role zones
+        Categorie[1] role categorie
+end
+
+--@ invariant MomentConcerne
+--@     scope
+--@         
+--@     |Le pris de base d'un spectacle est positif
+--@     |
+--@     | 
+--@     scope
+
+--@       Billet.dateAchat
+--@       Concerne
+--@       Representation.dateRep
+--@         
+--@     |Si un billet concerne une representation sa 
+--@     |date d'achat est avant(inférieure ou égale) la date de representation
+--@     |Le taux de réduction est positif et inférieur ou égale à 1
+--@     | L'heure de representation est positive
+--@     | Le nombre de sièges disponibles est positif
+--@     | Billet.tarifReduit est positif et inférieur ou égale à 1
