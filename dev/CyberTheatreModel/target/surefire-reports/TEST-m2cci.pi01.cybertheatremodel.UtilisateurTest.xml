@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="10" failures="0" name="m2cci.pi01.cybertheatremodel.UtilisateurTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="10" failures="0" name="m2cci.pi01.cybertheatremodel.UtilisateurTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin"/>
     <property name="user.country.format" value="BE"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Ltifi\Desktop\m2cci-2021-pi-01\dev\CyberTheatreModel"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Ltifi\Desktop\projetIntegration\dev\CyberTheatreModel"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Ltifi\Desktop\m2cci-2021-pi-01\dev\CyberTheatreModel"/>
+    <property name="user.dir" value="C:\Users\Ltifi\Desktop\projetIntegration\dev\CyberTheatreModel"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="15.0.2+7-27"/>
     <property name="os.arch" value="amd64"/>
@@ -66,9 +66,9 @@
   <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetMotDePasse" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetPrenom" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testGetNom" time="0"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testGetPrenom" time="0.001"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testGetPrenom" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetNom" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testGetMotDePasse" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetEmail" time="0"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetLogin" time="0.001"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetLogin" time="0"/>
 </testsuite>

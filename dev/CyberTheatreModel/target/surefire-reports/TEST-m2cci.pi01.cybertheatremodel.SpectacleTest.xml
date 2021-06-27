@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="18" failures="0" name="m2cci.pi01.cybertheatremodel.SpectacleTest" time="0.003" errors="0" skipped="0">
+<testsuite tests="18" failures="0" name="m2cci.pi01.cybertheatremodel.SpectacleTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin"/>
     <property name="user.country.format" value="BE"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Ltifi\Desktop\m2cci-2021-pi-01\dev\CyberTheatreModel"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Ltifi\Desktop\projetIntegration\dev\CyberTheatreModel"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Ltifi\Desktop\m2cci-2021-pi-01\dev\CyberTheatreModel"/>
+    <property name="user.dir" value="C:\Users\Ltifi\Desktop\projetIntegration\dev\CyberTheatreModel"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="15.0.2+7-27"/>
     <property name="os.arch" value="amd64"/>
@@ -70,12 +70,12 @@
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetType" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testAjouterRepresentation" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetImageSource" time="0"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetDescription" time="0.001"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetDescription" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetPublicCible" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetNumero" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetNom" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testSetPrixDeBase" time="0"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testSetType" time="0.002"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testSetType" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testRetirerRepresentation" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testSetNom" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testSetDuree" time="0"/>
