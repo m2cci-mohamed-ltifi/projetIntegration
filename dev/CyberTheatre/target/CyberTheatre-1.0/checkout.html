@@ -24,7 +24,7 @@
   <script type="text/javascript">
     // Create an instance of the Stripe object with your publishable API key
     var stripe = Stripe("pk_test_51J6CxVCkLlQznzQ3cygztskZ6BeFfvFYHpGTQf1Vz6d2ss5tva7EXESfwdyAbUPWAbDnadPXQsPZPKa23lgrs5BL004oz9QErh");
-    var checkoutButton = document.getElementById("checkout-button");
+    var checkoutButton = document.getElementById("validationAchat");
 
     checkoutButton.addEventListener("click", function () {
       fetch("/create-checkout-session", {

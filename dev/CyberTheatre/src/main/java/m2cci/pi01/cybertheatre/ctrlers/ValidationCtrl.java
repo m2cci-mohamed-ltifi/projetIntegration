@@ -1,3 +1,4 @@
+
 /*
  Affiche le récapitulatif de la commande avant de procéder à la pré-réservation ou au paiement direct
 Author     : M2CCI 2021 projet d'intégration groupe 01

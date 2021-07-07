@@ -60,3 +60,4 @@
                 </div>
             </div>
         </form>
+        <script src="../js/checkout.js" type="text/javascript"></script>

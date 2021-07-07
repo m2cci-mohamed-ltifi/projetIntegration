@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="m2cci.pi01_CyberTheatre_war_1.0PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>m2cci.pi01.cybertheatre.ctrlers.DossierDachats</class>
+    <class>m2cci.pi01.cybertheatre.ctrlers.RepresentationsBase</class>
+    <class>m2cci.pi01.cybertheatre.ctrlers.Billets</class>
+    <class>m2cci.pi01.cybertheatre.ctrlers.Sieges</class>
+    <class>m2cci.pi01.cybertheatre.ctrlers.Zones</class>
+    <class>m2cci.pi01.cybertheatre.ctrlers.Billetsbase</class>
+    <class>m2cci.pi01.cybertheatre.ctrlers.Representations</class>
+    <class>m2cci.pi01.cybertheatre.ctrlers.Spectacles</class>
+    <class>m2cci.pi01.cybertheatre.ctrlers.DossierDachatsbase</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlite:C:\Users\Ltifi\Desktop\projetIntegration\bd\sql\bd.sqlite3"/>
+      <property name="javax.persistence.jdbc.user" value=""/>
+      <property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+</persistence>

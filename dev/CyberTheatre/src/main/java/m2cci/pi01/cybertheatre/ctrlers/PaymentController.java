@@ -1,3 +1,4 @@
+
 package m2cci.pi01.cybertheatre.ctrlers;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -38,7 +39,7 @@ public class PaymentController {
     port(4242);
 
     // This is your real test secret API key.
-    Stripe.apiKey = "sk_test_51J6CxVCkLlQznzQ3htZHKiG1J176B81eZGXOHOnsF8191pYzGTs4pBciI77ei0F53xIqGrmrEiA7pNGD4O4dTyvI008GRHZDtW";
+    Stripe.apiKey = "pk_test_51J6CxVCkLlQznzQ3cygztskZ6BeFfvFYHpGTQf1Vz6d2ss5tva7EXESfwdyAbUPWAbDnadPXQsPZPKa23lgrs5BL004oz9QErh";
 
     staticFiles.externalLocation(
         Paths.get("").toAbsolutePath().toString());

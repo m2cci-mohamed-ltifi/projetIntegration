@@ -6,6 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <script src="js/inscription.js" type="text/javascript"></script>
         <title>Se connecter</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,26 +43,24 @@ and open the template in the editor.
             </div><br>
             <table>
                 <tr>
-                    <td><p><b>*</b>Civilité</td><td> <select id='civilite' type='text' name='civilite' size='1'>
-                            <option> Mlle
-                            <option> Mme
-                            <option> M                       
-                        </select></p> 
+                    
+                    <td><b>*</b>Login</td><td> <input required type='text' name='login' value='' placeholder="phigir"></td> 
                 </tr>
                 <tr>
-                    <td><p><b>*</b>Nom</td><td> <input required type='text' name='nom' value='' placeholder="Giraud"></p></td>
+                    <td><b>*</b>Nom</td><td> <input required type='text' name='nom' value='' placeholder="Giraud"></td>
                 </tr>
                 <tr>
-                    <td><p><b>*</b>Prénom</td><td> <input type='text' required name='prenom' value='' placeholder="Philémon"></p><td>
+                    <td><b>*</b>Prénom</td>
+                    <td> <input type='text' required name='prenom' value='' placeholder="Philémon"><td>
                 </tr>
                 <tr>
-                    <td><p><b>*</b>Adresse éléctronique</td><td> <input type='text' required name='email' value='' placeholder="Phildu38@gmail.com"></p><td>
+                    <td><b>*</b>Adresse éléctronique</td><td> <input type='text' required name='email' value='' placeholder="Phildu38@gmail.com"><td>
                 </tr>
                 <tr>
-                    <td><p><b>*</b>Mot de passe</td><td> <input type='password' required name='mdp' value='' placeholder="*****"></p><td>
+                    <td><b>*</b>Mot de passe</td><td> <input type='password' required name='mdp' value='' placeholder="*****"><td>
                 </tr>
                 <tr>
-                    <td><p><b>*</b>Confirmer le mot de passe</td><td> <input type='password' required name='mdpConfirmation' value='' placeholder="*****"></p><td>
+                    <td><b>*</b>Confirmer le mot de passe</td><td> <input type='password' required name='mdpConfirmation' value='' placeholder="*****"><td>
                 </tr>
             </table>
             <div id='validerSInscrire'>
