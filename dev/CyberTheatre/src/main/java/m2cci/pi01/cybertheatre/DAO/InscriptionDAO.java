@@ -20,7 +20,7 @@ import javax.sql.DataSource;
 public class InscriptionDAO {
     public static void ajouterUtilisateur(DataSource bdSQL, Utilisateur utilisateur)
     throws SQLException{
-    String requeteAjoutUtilisateur = "INSERT INTO Utilisateurs VALUES (?,?,?,?,?);";
+    String requeteAjoutUtilisateur = "INSERT INTO Utilisateurs (loginUtilisateur, motDePasseUtilisateur, nomUtilisateur, prenomUtilisateur, emailUtilisateur) VALUES (?,?,?,?,?);";
     try(
     Connection conn = bdSQL.getConnection();
     PreparedStatement stmtAjoutUtilisateur = conn.prepareStatement(requeteAjoutUtilisateur);)
