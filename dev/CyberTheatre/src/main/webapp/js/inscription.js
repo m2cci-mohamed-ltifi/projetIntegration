@@ -36,4 +36,3 @@ function inscription() {
 }
 
 
-document.getElementById("validationSInscrire").addEventListener("click", inscription);

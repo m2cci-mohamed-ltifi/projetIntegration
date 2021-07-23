@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="10" failures="0" name="m2cci.pi01.cybertheatremodel.UtilisateurTest" time="0" errors="0" skipped="0">
+<testsuite tests="10" failures="0" name="m2cci.pi01.cybertheatremodel.UtilisateurTest" time="0.003" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
@@ -66,7 +66,7 @@
   <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testGetNom" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testGetPrenom" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetNom" time="0"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testGetMotDePasse" time="0"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetEmail" time="0"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetLogin" time="0"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testGetMotDePasse" time="0.001"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetEmail" time="0.001"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetLogin" time="0.001"/>
 </testsuite>

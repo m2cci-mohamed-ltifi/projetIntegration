@@ -60,11 +60,11 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="m2cci.pi01.cybertheatremodel.RepresentationTest" name="testGetHeure" time="0"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.RepresentationTest" name="testGetNombePlaceDisponible" time="0"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.RepresentationTest" name="testGetNombePlaceDisponible" time="0.001"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.RepresentationTest" name="testGetSpectacle" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.RepresentationTest" name="testGetDate" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.RepresentationTest" name="testGetTauxReductionExceptionnelle" time="0"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.RepresentationTest" name="testSetNombePlaceDisponible" time="0.001"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.RepresentationTest" name="testSetNombePlaceDisponible" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.RepresentationTest" name="testSetTauxReductionExceptionnelle" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.RepresentationTest" name="testSetDate" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.RepresentationTest" name="testSetHeure" time="0.001"/>

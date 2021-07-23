@@ -144,6 +144,12 @@
             </div>
             
         </div>
+        <br>
+        <div class="container border border-warning rounded" id="usersList">
+            <button id="btnUsers" class="btn btn-warning">
+                <a href="ConsulterUtilisateurs">Consulter les utilisateurs</a>
+            </button>
+        </div>
 
         <script src="js/formulairesGerant.js" type="text/javascript"></script>
     </body>

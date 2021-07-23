@@ -93,7 +93,7 @@
                                     </div>
                                 </div>
 
-
+                                  
                                 <div class="form-group">
                                     <label for="site-search"><b>Titre</b></label><br>
                                     <input type="search" id="site-search" name="titreSpectacle"
