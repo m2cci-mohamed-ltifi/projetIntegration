@@ -66,7 +66,7 @@
   <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testGetNom" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testGetPrenom" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetNom" time="0"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testGetMotDePasse" time="0.001"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetEmail" time="0.001"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetLogin" time="0.001"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testGetMotDePasse" time="0"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetEmail" time="0.003"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.UtilisateurTest" name="testSetLogin" time="0"/>
 </testsuite>

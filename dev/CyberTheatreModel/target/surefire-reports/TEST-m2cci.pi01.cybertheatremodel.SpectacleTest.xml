@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="18" failures="0" name="m2cci.pi01.cybertheatremodel.SpectacleTest" time="0.003" errors="0" skipped="0">
+<testsuite tests="18" failures="0" name="m2cci.pi01.cybertheatremodel.SpectacleTest" time="0.004" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
@@ -60,21 +60,21 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetDuree" time="0.001"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetRepresentations" time="0.001"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetRepresentations" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testSetImageSource" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testSetDescription" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testSetRepresentations" time="0"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testSetPublicCible" time="0.001"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testSetPublicCible" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetType" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testAjouterRepresentation" time="0"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetImageSource" time="0"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetImageSource" time="0.001"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetDescription" time="0"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetPublicCible" time="0"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetPublicCible" time="0.001"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetNumero" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testGetNom" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testSetPrixDeBase" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testSetType" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testRetirerRepresentation" time="0"/>
   <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testSetNom" time="0"/>
-  <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testSetDuree" time="0"/>
+  <testcase classname="m2cci.pi01.cybertheatremodel.SpectacleTest" name="testSetDuree" time="0.001"/>
 </testsuite>

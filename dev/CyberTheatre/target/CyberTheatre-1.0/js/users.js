@@ -10,13 +10,15 @@ function chargerProgrammation() {
         url: "UtilisateurCtrl", // l'url de la servlet
         method: 'POST', // on utilise une méthode post
         data: {
-            nom : "nom"
+            nom : document.getElementById("nomU").value
         }
+        
 
         //$('#formSem').serializeArray()  // les données envoyée avec la requête
         // ici les paramètres du formulaire d'id 'formSem' c'est à dire
         // les couples nom, valeur des différents inputs du formulaire
-    }).then(
+    }
+            ).then(
         function fullFillHandler(data) {
             // fonction appelée quand la requête AJAX a abouti
             // data contient le code HTML de la table que l'on insère
@@ -38,4 +40,6 @@ function chargerProgrammation() {
 chargerProgrammation();
 
 //A chaque modification dans le formulaire, on recharge la liste des représentations
-document.getElementById("validationSInscrire").addEventListener("click", chargerProgrammation);
+e1=document.getElementById("validationSInscrire");
+        e1.addEventListener('click', chargerProgrammation);
+console.log(e1);

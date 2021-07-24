@@ -5,6 +5,12 @@
 --%>
 
     <%@page contentType="text/html" pageEncoding="UTF-8"%>
+    
+        <link rel="stylesheet" href="css/style-validation.css">
+        <div class="row">
+            <div class="col-md-3" id="divTransparent1">
+                 </div>
+            <div class="col-md-6">
         <form id="formulairePaiement">
             <div id="titrePaiement">
                 <b>Paiement sécurisé par carte bancaire</b> <img src="data/images/cartes.png" alt="cartes" id="imageCartes" class="img-fluid">
@@ -60,4 +66,7 @@
                 </div>
             </div>
         </form>
+        </div >
+            <div class="col-md-3" id="divTransparent2"></div>
+        </div>
         <script src="../js/checkout.js" type="text/javascript"></script>
